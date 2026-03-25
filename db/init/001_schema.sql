@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS students (
+  id INT PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  age INT NOT NULL
+);
+

@@ -15,4 +15,3 @@ public class Unit1Q02DisplayIdAndName {
         System.out.println("done by Krish Devkota");
     }
 }
-
