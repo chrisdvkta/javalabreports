@@ -15,13 +15,14 @@ public class Lab4Q01TcpClientSender {
         try (Socket socket = new Socket()) {
             socket.connect(new InetSocketAddress(host, port), 5000);
 
-            try (PrintWriter out = new PrintWriter(new OutputStreamWriter(socket.getOutputStream(), StandardCharsets.UTF_8), true)) {
-            out.println(message);
-            System.out.println("TCP message sent to " + host + ":" + port);
-            System.out.println("Message: " + message);
+            try (PrintWriter out = new PrintWriter(
+                    new OutputStreamWriter(socket.getOutputStream(), StandardCharsets.UTF_8), true)) {
+                out.println(message);
+                System.out.println("TCP message sent to " + host + ":" + port);
+                System.out.println("Message: " + message);
             }
         } catch (Exception e) {
-            System.out.println("TCP send failed: " + e.getMessage());
+            // System.out.println("TCP send failed: " + e.getMessage());
             System.out.println("Tip: Ensure a TCP server is listening on " + host + ":" + port);
         }
 
