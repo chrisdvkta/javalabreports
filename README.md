@@ -6,6 +6,8 @@ This repo is organized as:
 - `lab2_swing_event_handling/` - Lab 2 Swing programs (one `.java` file per question)
 - `lab3_database_connectivity/` - Lab 3 JDBC programs (one `.java` file per question)
 - `lab4_network_programming/` - Lab 4 socket programs (one `.java` file per question)
+- `lab5_servlets_jsp/` - Lab 5 servlet/JSP examples (one file per question)
+- `lab6_rmi_corba/` - Lab 6 RMI programs (one `.java` file per question)
 
 ## Compile + run (example)
 
@@ -59,4 +61,30 @@ Stop:
 
 ```bash
 docker compose down
+```
+
+## Lab 5 (Servlets + JSP)
+
+`lab5_servlets_jsp/` contains servlet/JSP examples intended to be deployed to a servlet container (e.g., Tomcat).
+
+- These examples use `jakarta.servlet` annotations (Tomcat 10+). If you use Tomcat 9, change imports from `jakarta.*` to `javax.*`.
+- For DB-based examples (login + CRUD), start the MySQL Docker service and add MySQL Connector/J to your server/webapp classpath.
+
+## Lab 6 (RMI)
+
+Compile:
+
+```bash
+cd lab6_rmi_corba
+javac *.java
+```
+
+Run (needs 2 terminals):
+
+```bash
+# Terminal 1
+java Lab6Q01RmiSum server 1099
+
+# Terminal 2
+java Lab6Q01RmiSum client 1099 5 7
 ```
